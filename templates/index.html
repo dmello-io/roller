@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Blind Control</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" src="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="card">
+        <h5 class="card-header">Blind Control</h5>
+        <div class="card-body d-flex flex-column">
+            
+            <div class="card bg-light mb-3">
+                <div class="card-header">FAQ's</div>
+                <div class="card-body">
+                  <h5 class="card-title">Opening Blinds</h5>
+                  <p class="card-text">Select one or more rooms then press the Open Blinds button to open the selected blinds.</p>
+                  <h5 class="card-title">Closing Blinds</h5>
+                  <p class="card-text">Select one or more rooms then press the Close Blinds button to close the selected blinds.</p>
+                </div>
+              </div>
+
+            <form class="container mt-auto">
+                <div class="form-group row">
+                    <select class="custom-select" multiple>
+                        <option value="room_parents">Parents Bedroom</option>
+                        <option value="room_living_left">Living Room Left</option>
+                        <option value="room_living_right">Living Room Right</option>
+                        <option value="room_kitchen">Kitchen</option>
+                        <option value="room_laundry">Laundry Room</option>
+                        <option value="room_study">Kayden's Study</option>
+                        <option value="room_bedroom">Kayden's Bedroom</option>
+                        <option value="room_all">All Rooms</option>
+                    </select>
+                </div>
+
+                <div class="form-group row">
+                    <button type="button" class="btn btn-dark btn-lg btn-block btn-open">Open Blinds</button>
+                </div>
+
+                <div class="form-group row">
+                    <button type="button" class="btn btn-dark btn-lg btn-block btn-close">Close Blinds</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
